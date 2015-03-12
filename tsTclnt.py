@@ -14,7 +14,7 @@ while True:
     data = input('> ')
     if not data:
         break
-    tcpCliSock.send(data)
+    tcpCliSock.send(data.encode('utf-8'))
     data = tcpCliSock.recv(BUFSIZE)
     if not data:
         break
